@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 from Bio import SeqIO
 
-def needleman_wunsch(seq1, seq2, match=1, mismatch=-1, gap=-2):
+def needleman_wunsch(seq1, seq2, match=2, mismatch=-1, gap=-2):
     n, m = len(seq1), len(seq2)
     score_matrix = np.zeros((n + 1, m + 1))
     
